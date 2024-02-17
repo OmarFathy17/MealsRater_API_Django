@@ -39,7 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'api',
+    'rest_framework.authtoken',
 ]
+
+rest_framework = {
+    'DEFAULT_PERMISSION_CLASSES':{
+        'rest_framework.permission.IsAuthenticated',
+        }
+}
 
 
 MIDDLEWARE = [
